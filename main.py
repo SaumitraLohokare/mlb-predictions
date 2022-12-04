@@ -2,8 +2,10 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
 from data_importer import import_from_csv
+from calculations import calculate
 
 from dotenv import load_dotenv
+import pp
 
 import os
 
@@ -11,7 +13,11 @@ load_dotenv()
 
 client = MongoClient("mongodb+srv://" + os.getenv("U_NAME") + ":" + os.getenv("PASS") + "@mlb-predictions.caflwws.mongodb.net/?retryWrites=true&w=majority", server_api=ServerApi('1'))
 db = client["mlb"]
-coll = db["pitching"]
+pitching_coll = db["pitching"]
+batting_coll = db["batting"]
 
 data_pitching = import_from_csv('team_standard_pitching.csv')
-data_batting = import_from_csv('team_standart_batting.csv')
+data_batting = import_from_csv('team_standard_batting.csv')
+
+print("Batting task:")
+pp(calculate(batting_coll))
