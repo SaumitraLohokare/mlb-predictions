@@ -46,7 +46,26 @@ dRPB_playoffs = { k:v for k, v in dRPB.items() if k in playoff_teams }
 matches = list(combinations(playoff_teams, 2))
 
 # Simulate matches
-for match in matches:
+# for match in matches:
+#     print("----------", match[0], " vs", match[1], "----------")
+#     first_half = oRPB_playoffs[match[0]] - dRPB_playoffs[match[1]]
+#     second_half = oRPB_playoffs[match[1]] - dRPB_playoffs[match[0]]
+
+#     print(first_half, second_half)
+#     if first_half > second_half:
+#         print("Winner: ", match[0])
+#     else:
+#         print("Winner: ", match[1])
+#     print()
+
+brackets = [
+    ("Tampa Bay Rays", "Cleveland Guardians"),
+    ("Seattle Mariners", "Toronto Blue Jays"),
+    ("Philadelphia Phillies", "St. Louis Cardinals"),
+    ("San Diego Padres", "New York Mets")
+]
+
+for match in brackets:
     print("----------", match[0], " vs", match[1], "----------")
     first_half = oRPB_playoffs[match[0]] - dRPB_playoffs[match[1]]
     second_half = oRPB_playoffs[match[1]] - dRPB_playoffs[match[0]]
