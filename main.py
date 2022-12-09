@@ -14,6 +14,7 @@ load_dotenv()
 
 # Connecting to MongoDB
 client = MongoClient("mongodb+srv://" + os.getenv("U_NAME") + ":" + os.getenv("PASS") + "@mlb-predictions.caflwws.mongodb.net/?retryWrites=true&w=majority", server_api=ServerApi('1'))
+print("mongodb+srv://" + os.getenv("U_NAME") + ":" + os.getenv("PASS") + "@mlb-predictions.caflwws.mongodb.net/?retryWrites=true&w=majority")
 db = client["mlb"]
 pitching_coll = db["pitching"]
 batting_coll = db["batting"]
@@ -51,11 +52,17 @@ matches = list(combinations(playoff_teams, 2))
 
 # Simulate matches --> Task 3
 def predict_winner(teams) -> str:
+    print("Predicting match:")
+    print("\t", teams[0], "vs", teams[1])
     first_half = oRPB_playoffs[teams[0]] - dRPB_playoffs[teams[1]]
     second_half = oRPB_playoffs[teams[1]] - dRPB_playoffs[teams[0]]
+    print("\t", teams[0], ":", first_half)
+    print("\t", teams[1], ":", second_half)
     if first_half > second_half:
+        print("\tWINNER:", teams[0])
         return teams[0]
     else:
+        print("\tWINNER:", teams[1])
         return teams[1]
 
 wildcard_brackets = [
@@ -77,12 +84,27 @@ championship_brackets = [
     (predict_winner(divisional_brackets[2]), predict_winner(divisional_brackets[3])),
 ]
 
-overall_winner = predict_winner((predict_winner(championship_brackets[0]), predict_winner(championship_brackets[1])))
+finals_bracket = [
+    (predict_winner(championship_brackets[0]), predict_winner(championship_brackets[1]))
+]
 
+overall_winner = predict_winner(finals_bracket[0])
+
+print("\nWildcard:")
 pp(wildcard_brackets)
 print()
+
+print("Divisional:")
 pp(divisional_brackets)
 print()
+
+print("Championship:")
 pp(championship_brackets)
 print()
+
+print("Finals:")
+pp(finals_bracket)
+print()
+
+print("Winner:")
 print(overall_winner)

@@ -1,0 +1,77 @@
+Predicting match:
+	 Tampa Bay Rays vs Cleveland Guardians
+	 Tampa Bay Rays batting: -0.004577598119001713
+	 Cleveland Guardians batting: 0.0017894984695078775
+	WINNER: Cleveland Guardians
+Predicting match:
+	 Seattle Mariners vs Toronto Blue Jays
+	 Seattle Mariners batting: -0.004823119572150536
+	 Toronto Blue Jays batting: 0.033233941811067924
+	WINNER: Toronto Blue Jays
+Predicting match:
+	 Philadelphia Phillies vs St. Louis Cardinals
+	 Philadelphia Phillies batting: 0.05023278450136037
+	 St. Louis Cardinals batting: 0.019414786630505942
+	WINNER: Philadelphia Phillies
+Predicting match:
+	 San Diego Padres vs New York Mets
+	 San Diego Padres batting: 0.016766910611897168
+	 New York Mets batting: 0.018303425657807404
+	WINNER: New York Mets
+Predicting match:
+	 New York Yankees vs Cleveland Guardians
+	 New York Yankees batting: 0.04275340841730885
+	 Cleveland Guardians batting: 0.025484733305473184
+	WINNER: New York Yankees
+Predicting match:
+	 Houston Astros vs Toronto Blue Jays
+	 Houston Astros batting: 0.012867843766720177
+	 Toronto Blue Jays batting: 0.06654711984821143
+	WINNER: Toronto Blue Jays
+Predicting match:
+	 Atlanta Braves vs Philadelphia Phillies
+	 Atlanta Braves batting: 0.04124199019075131
+	 Philadelphia Phillies batting: 0.0462169807809224
+	WINNER: Philadelphia Phillies
+Predicting match:
+	 Los Angeles Dodgers vs New York Mets
+	 Los Angeles Dodgers batting: 0.06221990106048075
+	 New York Mets batting: 0.06230781481617603
+	WINNER: New York Mets
+Predicting match:
+	 New York Yankees vs Toronto Blue Jays
+	 New York Yankees batting: 0.037107790572987076
+	 Toronto Blue Jays batting: 0.04481876742500107
+	WINNER: Toronto Blue Jays
+Predicting match:
+	 Philadelphia Phillies vs New York Mets
+	 Philadelphia Phillies batting: 0.0434135367639204
+	 New York Mets batting: 0.017544649713228
+	WINNER: Philadelphia Phillies
+Predicting match:
+	 Toronto Blue Jays vs Philadelphia Phillies
+	 Toronto Blue Jays batting: 0.012561579712005166
+	 Philadelphia Phillies batting: 0.018004566484407847
+	WINNER: Philadelphia Phillies
+
+Wildcard:
+[('Tampa Bay Rays', 'Cleveland Guardians'),
+ ('Seattle Mariners', 'Toronto Blue Jays'),
+ ('Philadelphia Phillies', 'St. Louis Cardinals'),
+ ('San Diego Padres', 'New York Mets')]
+
+Divisional:
+[('New York Yankees', 'Cleveland Guardians'),
+ ('Houston Astros', 'Toronto Blue Jays'),
+ ('Atlanta Braves', 'Philadelphia Phillies'),
+ ('Los Angeles Dodgers', 'New York Mets')]
+
+Championship:
+[('New York Yankees', 'Toronto Blue Jays'),
+ ('Philadelphia Phillies', 'New York Mets')]
+
+Finals:
+[('Toronto Blue Jays', 'Philadelphia Phillies')]
+
+Winner:
+Philadelphia Phillies
