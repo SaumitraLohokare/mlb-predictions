@@ -14,13 +14,13 @@ load_dotenv()
 
 # Connecting to MongoDB
 client = MongoClient("mongodb+srv://" + os.getenv("U_NAME") + ":" + os.getenv("PASS") + "@mlb-predictions.caflwws.mongodb.net/?retryWrites=true&w=majority", server_api=ServerApi('1'))
-print("mongodb+srv://" + os.getenv("U_NAME") + ":" + os.getenv("PASS") + "@mlb-predictions.caflwws.mongodb.net/?retryWrites=true&w=majority")
 db = client["mlb"]
 pitching_coll = db["pitching"]
 batting_coll = db["batting"]
 
 # Importing data sets
 data_pitching = import_from_csv('team_standard_pitching.csv')
+# pitching_coll.insert_all(data_pitching)
 data_batting = import_from_csv('team_standard_batting.csv')
 
 playoff_teams = (
